@@ -44,7 +44,7 @@ async function createWindow(): Promise<BrowserWindow> {
   // 开发环境加载 dev server，生产环境加载打包文件
   if (process.env.NODE_ENV === 'development') {
     await mainWindow.loadURL('http://localhost:5173');
-    mainWindow.webContents.openDevTools({ mode: 'detach' });
+    // mainWindow.webContents.openDevTools({ mode: 'detach' }); // 需要调试时取消注释
   } else {
     await mainWindow.loadFile(path.join(__dirname, '../renderer/index.html'));
   }

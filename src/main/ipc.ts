@@ -40,7 +40,7 @@ export function setupIPC(window: BrowserWindow): void {
     // TODO: 从 electron-store 读取配置
     return {
       hotkey: {
-        shortcut: 'CommandOrControl+Space',
+        shortcut: 'CommandOrControl+Shift+Space',
         longPressThreshold: 300,
         doublePressThreshold: 300,
       },

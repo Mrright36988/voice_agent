@@ -28,7 +28,7 @@ interface HotkeyConfig {
 }
 
 const DEFAULT_CONFIG: HotkeyConfig = {
-  shortcut: 'CommandOrControl+Space',
+  shortcut: 'CommandOrControl+Shift+Space',
   longPressThreshold: 300,
   doublePressThreshold: 300,
 };

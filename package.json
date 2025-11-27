@@ -1,61 +1,67 @@
 {
-  "name": "voice-agent",
-  "version": "1.0.0",
-  "description": "Desktop Voice Assistant - Speech-to-Text + LLM Agent",
-  "main": "dist/main/index.js",
-  "scripts": {
-    "dev": "electron-vite dev",
-    "build": "electron-vite build",
-    "preview": "electron-vite preview",
-    "start": "electron .",
-    "package": "electron-builder",
-    "package:mac": "electron-builder --mac",
-    "package:win": "electron-builder --win",
-    "typecheck": "tsc --noEmit",
-    "lint": "eslint src --ext .ts,.tsx"
-  },
-  "dependencies": {
-    "@nut-tree/nut-js": "^4.0.0",
-    "axios": "^1.6.0",
-    "electron-store": "^8.1.0",
-    "zustand": "^4.4.0"
-  },
-  "devDependencies": {
-    "@types/node": "^20.10.0",
-    "@types/react": "^18.2.0",
-    "@types/react-dom": "^18.2.0",
-    "@typescript-eslint/eslint-plugin": "^6.13.0",
-    "@typescript-eslint/parser": "^6.13.0",
-    "@vitejs/plugin-react": "^4.2.0",
-    "autoprefixer": "^10.4.16",
-    "electron": "^28.0.0",
-    "electron-builder": "^24.9.0",
-    "electron-vite": "^2.0.0",
-    "eslint": "^8.55.0",
-    "eslint-plugin-react": "^7.33.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "postcss": "^8.4.32",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "tailwindcss": "^3.4.0",
-    "typescript": "^5.3.2",
-    "vite": "^5.0.0"
-  },
-  "build": {
-    "appId": "com.voiceagent.app",
-    "productName": "Voice Agent",
-    "directories": {
-      "output": "release"
+    "name": "voice-agent",
+    "version": "1.0.0",
+    "description": "Desktop Voice Assistant - Speech-to-Text + LLM Agent",
+    "type": "module",
+    "main": "out/main/index.js",
+    "scripts": {
+        "dev": "electron-vite dev",
+        "build": "electron-vite build",
+        "preview": "electron-vite preview",
+        "start": "electron .",
+        "package": "electron-builder",
+        "package:mac": "electron-builder --mac",
+        "package:win": "electron-builder --win",
+        "typecheck": "tsc --noEmit",
+        "lint": "eslint src --ext .ts,.tsx"
     },
-    "mac": {
-      "category": "public.app-category.productivity",
-      "icon": "resources/icon.icns",
-      "target": ["dmg", "zip"]
+    "dependencies": {
+        "@nut-tree/nut-js": "^4.0.0",
+        "axios": "^1.6.0",
+        "electron-store": "^8.1.0",
+        "zustand": "^4.4.0"
     },
-    "win": {
-      "icon": "resources/icon.ico",
-      "target": ["nsis", "portable"]
+    "devDependencies": {
+        "@types/node": "^20.10.0",
+        "@types/react": "^18.2.0",
+        "@types/react-dom": "^18.2.0",
+        "@typescript-eslint/eslint-plugin": "^6.13.0",
+        "@typescript-eslint/parser": "^6.13.0",
+        "@vitejs/plugin-react": "^4.2.0",
+        "autoprefixer": "^10.4.16",
+        "electron": "^28.0.0",
+        "electron-builder": "^24.9.0",
+        "electron-vite": "^2.0.0",
+        "eslint": "^8.55.0",
+        "eslint-plugin-react": "^7.33.0",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "postcss": "^8.4.32",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "tailwindcss": "^3.4.0",
+        "typescript": "^5.3.2",
+        "vite": "^5.0.0"
+    },
+    "build": {
+        "appId": "com.voiceagent.app",
+        "productName": "Voice Agent",
+        "directories": {
+            "output": "release"
+        },
+        "mac": {
+            "category": "public.app-category.productivity",
+            "icon": "resources/icon.icns",
+            "target": [
+                "dmg",
+                "zip"
+            ]
+        },
+        "win": {
+            "icon": "resources/icon.ico",
+            "target": [
+                "nsis",
+                "portable"
+            ]
+        }
     }
-  }
 }
-
